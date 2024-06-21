@@ -160,7 +160,19 @@ class PercentCalculator extends Calculator
      */
     private static function calculateMarginPercentage($firstNumber, $secondNumber): float
     {
-        return (($secondNumber - $firstNumber) / abs($firstNumber)) * 100;
+        try {
+            return (($secondNumber - $firstNumber) / $secondNumber) * 100;
+        } catch (DivisionByZeroError) {
+            if($firstNumber == 0 && $secondNumber == 0) {
+                return 0;
+            } else {
+                if($firstNumber > $secondNumber) {
+                    return -100;
+                } else {
+                    return 100;
+                }
+            }
+        }
     }
 
     /**

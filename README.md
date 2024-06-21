@@ -7,6 +7,10 @@ require_once '/path/to/MathCalculator.php';
 $numbers = [10, 20, 30, 40, 50];
 $result = MathCalculator::calculate(MathCalculator::AVERAGE, $numbers)->toString();
 echo $result;
+
+$percentage = PercentCalculator::calculatePercentage(PercentCalculator::MARGIN_PERCENTAGE, $this->amount, $this->prevAmount);
+$percentage = $percentage->toFloat();
+echo $percentage;
 ```
 
 ## Contributing

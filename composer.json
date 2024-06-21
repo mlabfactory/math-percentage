@@ -4,7 +4,6 @@
     "type": "library",
     "license": "APACHE 3.0",
     "keywords": ["math", "percentage", "php"],
-    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "Mlab\\MathPercentage\\": "src/"
@@ -21,6 +20,6 @@
         "phpunit/phpunit": "^11.1.3"
     },
     "require": {
-        "php": "^8.2"
+        "php": "^8.1"
     }
 }
